@@ -23,9 +23,7 @@
     --font-destaque: "DynaPuff", system-ui;
 
 }
-body {
-    
-}
+
 
 aside.barra-escassez > p {
     text-align: center;
@@ -36,9 +34,7 @@ aside.barra-escassez > p {
     font-family: var(--font-padrao);
     font-weight: 600;
 }
-header, section, footer {
-    padding: 40px 30px;
-}
+
 
 header {
     text-align: center;
@@ -68,7 +64,7 @@ header > p {
 /* 1. Configuração da Seção que segura o vídeo e o botão */
 section.area-video {
     background-image: linear-gradient(var(--cor4), var(--cor3));
-    padding: 40px 20px;
+    padding: 10px 20px;
     text-align: center; /* Centraliza o vídeo e o botão de compra */
 }
 
@@ -112,4 +108,151 @@ section.area-video > iframe {
     box-shadow: 0px 8px 20px black;
 }
 
+section.entregaveis {
+    background-color: var(--cor2);
+    color: white;
 
+}
+
+section.entregaveis h2 {
+    font-family: var(--font-titulo);
+    font-size: 2.1em;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/* Quando a tela for menor que 768px (tablets e celulares) */
+@media (max-width: 768px) {
+    .container-lado-a-lado {
+        /* Muda de linha (horizontal) para coluna (vertical) */
+        flex-direction: column; 
+        
+        /* Centraliza tudo no celular (opcional) */
+        text-align: center;
+    }
+}
+
+.container-lado-a-lado {
+    /* 1. Ativa o Flexbox - Alinha os filhos na horizontal automaticamente */
+    display: flex; 
+    
+    /* 2. Cria um espaço (respiro) entre a imagem e o texto */
+    gap: 20px; 
+    
+    /* 3. Alinha verticalmente os elementos. 
+       Use 'center' para alinhar no meio ou 'flex-start' para alinhar no topo. */
+    align-items: center; 
+    
+    /* Opcional: Dá um espaço geral em volta do container */
+    padding: 20px;
+}
+
+/* Opcional: Controlar o tamanho da imagem para ela não dominar a tela */
+.container-lado-a-lado img {
+    max-width: 250px; /* A imagem nunca será maior que 200px */
+    width: 100%;       /* Mas pode diminuir se a tela for menor */
+    height: auto;
+}
+
+section > div > ul {
+    font-family: var(--font-padrao);
+    font-size: 1.4em;
+    text-align: justify;
+    line-height: 1.5em;
+    padding-left: 50px;
+}
+
+section > div > ul > li {
+    padding: 15px;
+}
+
+section.prova-social {
+    background-color: var(--cor3);
+    color: white;
+    text-align: center;
+    
+
+}
+
+section.prova-social h2 {
+    font-family: var(--font-titulo);
+ text-align: center;
+ font-size: 2em;
+}
+
+@media (max-width: 768px) {
+    .lado-a-lado {
+        /* Muda de linha (horizontal) para coluna (vertical) */
+        flex-direction: column; 
+        
+        /* Centraliza tudo no celular (opcional) */
+        text-align: center;
+    }
+}
+
+section > div > article.depoimento > img {
+    max-width: 250px;
+    width: 100%;
+    padding: 20px;
+    
+}
+section > div > article.depoimento2 > img {
+    max-width: 250px;
+    width: 100%;
+    padding: 20px;
+    
+    
+}
+
+section > div > article.depoimento2 {
+    padding-left: 100px;
+}
+section > div > article.depoimento > blockquote {
+    text-align: center;
+    font-family: var(--font-destaque);
+    font-size: 1.1em;
+    padding-bottom: 20px;
+}
+
+section > div > article.depoimento2 > blockquote {
+    text-align: center;
+    font-family: var(--font-destaque);
+    font-size: 1.1em;
+    padding-bottom: 20px;
+}
+
+.lado-a-lado {
+    display: flex; 
+    gap: 20px; 
+    align-items: center; 
+    padding: 20px;
+    
+    
+}
+
+section article.garantia {
+    background-color: var(--cor4);
+    text-align: center;   
+    padding: 20px; 
+    color: white;
+}
+
+section article.garantia h2 {
+    font-family: var(--font-titulo);
+    padding-bottom: 20px;
+}
+
+section article.garantia p {
+    font-family: var(--font-padrao);
+    font-size: 1.2em;
+    text-align: justify;
+    
+}
+
+footer {
+    background-color: #054a29;
+    color:  white;
+    text-align: center;
+    padding: 20px;
+    line-height: 30px;
+}
