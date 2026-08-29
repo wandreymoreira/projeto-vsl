@@ -1,0 +1,115 @@
+@charset "UTf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor0: #c2f5cd;
+    --cor1: #5bba6f;
+    --cor2: #3fa34d;
+    --cor3: #2a9134;
+    --cor4: #137547;
+    --cor5: #054a29;
+
+    --font-padrao: Arial, Verdana, Tahoma;
+    --font-titulo: "Charis SIL", serif;
+    --font-destaque: "DynaPuff", system-ui;
+
+}
+body {
+    
+}
+
+aside.barra-escassez > p {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(248, 248, 32);
+    color: black;
+    font-family: var(--font-padrao);
+    font-weight: 600;
+}
+header, section, footer {
+    padding: 40px 30px;
+}
+
+header {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    background-color: var(--cor4);
+
+    
+}
+
+header > h1 {
+    font-family: var(--font-titulo);
+    padding-bottom: 15px;
+    margin: auto;
+    min-width: 150px;
+    font-size: 2.5em;
+    line-height: 60px;
+    color: white;
+    
+}
+
+header > p {
+    font-family: var(--font-padrao);
+    color: white;
+}
+
+/* 1. Configuração da Seção que segura o vídeo e o botão */
+section.area-video {
+    background-image: linear-gradient(var(--cor4), var(--cor3));
+    padding: 40px 20px;
+    text-align: center; /* Centraliza o vídeo e o botão de compra */
+}
+
+/* 2. Configuração direta do iFrame (O Vídeo) */
+section.area-video > iframe {
+    width: 100%; /* Ocupa toda a tela no celular... */
+    max-width: 600px; /* ...mas trava em 800px no computador, não deixando ficar gigante */
+    
+    aspect-ratio: 1 / 1; /* O CSS calcula o formato de cinema automaticamente! */
+    
+    margin: 0 auto 30px auto; /* Centraliza o vídeo e dá um espaço de 30px embaixo para o botão */
+    display: block; /* Comportamento de caixa para a margem funcionar */
+    
+    /* Um toque profissional (Opcional) */
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.botao-compra {
+    display: block;
+    text-decoration: none;
+    background-color: var(--cor4);
+    color: white;
+    /* Box Model (O que dá o formato de botão) */
+    padding: 20px 40px; /* 20px em cima/baixo e 40px nas laterais */
+    max-width: 600px; /* Evita que o botão fique gigante no computador */
+    margin: 30px auto; /* Dá um respiro e centraliza na tela */
+    font-family: var(--font-destaque);
+    font-size: 1.3em;
+    line-height: 29px;
+    font-weight: 600;
+    border-radius: 8px;
+    box-shadow: 0px 6px 15px rgba(0, 200, 83, 0.4); /* Uma sombra verde brilhante */
+    transition: all 0.3s ease; /* Faz com que qualquer mudança (como passar o mouse) seja suave */
+
+}
+
+.botao-compra:hover {
+    background-color: var(--cor2);
+    transform: scale(1.05); /* Faz o botão inflar/crescer 5% para pedir o clique */
+    box-shadow: 0px 8px 20px black;
+}
+
+
